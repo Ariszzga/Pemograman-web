@@ -1,4 +1,4 @@
-/* ── HERO ── */
+/* hero*/
 .hero {
   position: relative;
   width: 100%;
@@ -178,7 +178,6 @@
   .hero-counter { display: none; }
 }
 
-/* ── Bootstrap Carousel Hero overrides ── */
 .carousel-item.hero-slide {
   height: 100vh;
   background-size: cover;
@@ -187,7 +186,6 @@
   align-items: center;
 }
 
-/* Make Bootstrap carousel-item display:flex when active */
 .carousel-item.active.hero-slide { display: flex; }
 
 .hero-overlay {

@@ -9,7 +9,7 @@ body{font-family:var(--font);background:var(--bg);color:#CBAF87;font-size:15px;l
 a{text-decoration:none;color:inherit}
 img{display:block;max-width:100%}
  
-/* ── NAVBAR ── */
+/* navigasi */
 nav{
   position:sticky;top:0;z-index:99;
   background:#31485F;border-bottom:1px solid rgb(243, 247, 252);
@@ -30,16 +30,6 @@ nav{
   .prod-grid,.news-grid,.testi-grid{grid-template-columns:1fr}
   .ft-grid{grid-template-columns:1fr}
   #stats{grid-template-columns:1fr}
-}
-
-/* ── NAVBAR ── */
-#navbar {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 999;
-  background: transparent;
-  transition: background 0.4s ease, box-shadow 0.4s ease, padding 0.3s ease;
-  padding: 18px 0;
 }
 
 #navbar.scrolled {
