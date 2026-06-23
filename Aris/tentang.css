@@ -1,0 +1,111 @@
+/* ── TENTANG BRAND ── */
+.about {
+  padding: 110px 0;
+  background: var(--bg);
+}
+
+.about-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about-visual { position: relative; }
+
+.about-img-main {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+}
+
+.about-img-accent {
+  position: absolute;
+  bottom: -28px; right: -28px;
+  width: 42%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 4px solid var(--bg);
+  border-radius: 4px;
+}
+
+.about-badge {
+  position: absolute;
+  top: 28px; left: -18px;
+  background: var(--soft);
+  color: var(--navy);
+  padding: 16px 18px;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+.about-badge strong { display: block; font-size: 2rem; font-weight: 700; line-height: 1; }
+.about-badge span   { font-size: 0.6rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; }
+
+.about-eyebrow {
+  font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 4px; text-transform: uppercase;
+  color: var(--soft); margin-bottom: 18px;
+}
+
+.about-title {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  color: var(--white);
+}
+
+.about-desc {
+  color: var(--muted);
+  line-height: 1.9;
+  font-size: 0.94rem;
+  margin-bottom: 18px;
+}
+
+.about-values {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 32px 0;
+}
+
+.about-value {
+  background: var(--card);
+  border-left: 3px solid var(--soft);
+  padding: 14px 16px;
+  border-radius: 0 4px 4px 0;
+}
+.about-value strong { display: block; font-size: 0.84rem; font-weight: 600; margin-bottom: 4px; color: var(--white); }
+.about-value span   { font-size: 0.76rem; color: var(--muted); }
+
+.btn-about {
+  display: inline-block;
+  background: transparent;
+  border: 2px solid var(--soft);
+  color: var(--soft);
+  padding: 12px 34px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: background 0.3s, color 0.3s;
+}
+.btn-about:hover { background: var(--soft); color: var(--navy); }
+
+@media (max-width: 900px) {
+  .about-inner { grid-template-columns: 1fr; gap: 60px; }
+  .about-visual { max-width: 480px; margin: 0 auto; }
+}
+@media (max-width: 500px) {
+  .about-inner { padding: 0 24px; }
+  .about-values { grid-template-columns: 1fr; }
+  .about-img-accent { display: none; }
+}
