@@ -1,0 +1,20 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Log
+*.log
+
+# Environment
+.env
+
+# XAMPP
+xampp/
+
+# Composer (jika digunakan)
+vendor/
+
+backend/config/db.php

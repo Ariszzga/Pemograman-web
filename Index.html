@@ -9,9 +9,50 @@
     <link rel="stylesheet" href="Aris/statistik.css">
     <link rel="stylesheet" href="Aris/tentang.css">
     <title>Fashion Website</title>
-<style>
-
-</style>
+<script>
+// ── Load produk dari database ──
+fetch('backend/api/products.php')
+  .then(r => r.json())
+  .then(res => {
+    const grid = document.getElementById('productsGrid');
+    if (!grid || !res.data) return;
+    grid.innerHTML = res.data.map(p => `
+      <div class="col-6 col-md-3">
+        <div class="product-card">
+          <div class="card-img-wrap">
+            ${p.badge ? '<span class="card-badge">'+p.badge+'</span>' : ''}
+            <img src="${p.image_url}" alt="${p.name}"/>
+            <div class="card-actions">
+              <button class="action-btn">Tambah ke Keranjang</button>
+              <button class="action-btn wishlist">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card-info">
+            <span class="card-cat">${p.category}</span>
+            <h3>${p.name}</h3>
+            <div class="card-meta">
+              <div>
+                <span class="card-price">
+                  Rp ${parseInt(p.price).toLocaleString('id-ID')}
+                </span>
+                ${p.price_old
+                  ? '<span class="card-price-old">Rp '
+                    +parseInt(p.price_old).toLocaleString('id-ID')+'</span>'
+                  : ''}
+              </div>
+              <div class="card-rating">
+                <i class="bi bi-star-fill"></i> ${p.rating}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  });
+ 
+</script>
 
 </head>
 <body>
@@ -255,11 +296,11 @@
         <p>Daftar sekarang dan nikmati diskon 10% untuk pembelian pertamamu</p>
       </div>
       <div>
-        <div class="newsletter-form" id="newsletterForm">
-          <input class="newsletter-input" type="email" id="emailInput" placeholder="Masukkan email kamu..."/>
-          <button class="newsletter-submit" id="subscribeBtn">Subscribe</button>
-        </div>
-        <p class="newsletter-success" id="successMsg">✓ Berhasil! Cek email kamu untuk kode diskon.</p>
+        <form class="newsletter-form" id="newsletterForm" onsubmit="handleSubscribe(event)">
+          <input class="newsletter-input" type="email" id="emailInput" placeholder="Masukkan email kamu..." required/>
+          <button class="newsletter-submit" type="submit" id="subscribeBtn">Subscribe</button>
+        </form>
+        <p class="newsletter-success" id="successMsg" style="display:none;">✓ Berhasil! Cek email kamu untuk kode diskon.</p>
       </div>
     </div>
   </div>
@@ -348,5 +389,89 @@
     </div>
   </footer>
     
+
+<script>
+// ── Load produk dari database ──
+// (dijalankan setelah seluruh DOM siap)
+fetch('backend/api/products.php')
+  .then(r => r.json())
+  .then(res => {
+    const grid = document.getElementById('productsGrid');
+    if (!grid || !res.data) return;
+    grid.innerHTML = res.data.map(p => `
+      <div class="col-6 col-md-3">
+        <div class="product-card">
+          <div class="card-img-wrap">
+            ${p.badge ? '<span class="card-badge">'+p.badge+'</span>' : ''}
+            <img src="${p.image_url}" alt="${p.name}"/>
+            <div class="card-actions">
+              <button class="action-btn">Tambah ke Keranjang</button>
+              <button class="action-btn wishlist">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card-info">
+            <span class="card-cat">${p.category}</span>
+            <h3>${p.name}</h3>
+            <div class="card-meta">
+              <div>
+                <span class="card-price">
+                  Rp ${parseInt(p.price).toLocaleString('id-ID')}
+                </span>
+                ${p.price_old
+                  ? '<span class="card-price-old">Rp '
+                    +parseInt(p.price_old).toLocaleString('id-ID')+'</span>'
+                  : ''}
+              </div>
+              <div class="card-rating">
+                <i class="bi bi-star-fill"></i> ${p.rating}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  })
+  .catch(err => console.error('Gagal load produk:', err));
+
+</script>
+<script>
+// ── Newsletter Subscribe ──
+function handleSubscribe(e) {
+  e.preventDefault();
+
+  const form    = document.getElementById('newsletterForm');
+  const btn     = document.getElementById('subscribeBtn');
+  const success = document.getElementById('successMsg');
+  const email   = document.getElementById('emailInput').value.trim();
+
+  // Loading state
+  btn.textContent  = 'Loading...';
+  btn.disabled     = true;
+
+  fetch('backend/api/newsletter.php', {
+    method:  'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body:    JSON.stringify({ email })
+  })
+  .then(r => r.json())
+  .then(res => {
+    if (res.status === 'success') {
+      form.style.display    = 'none';
+      success.style.display = 'block';
+    } else {
+      alert(res.message);
+      btn.textContent = 'Subscribe';
+      btn.disabled    = false;
+    }
+  })
+  .catch(() => {
+    alert('Terjadi kesalahan, coba lagi.');
+    btn.textContent = 'Subscribe';
+    btn.disabled    = false;
+  });
+}
+</script>
 </body>
 </html>
