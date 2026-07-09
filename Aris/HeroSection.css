@@ -23,7 +23,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(31,41,55,0.92) 0%, rgba(49,72,95,0.75) 50%, rgba(91,125,177,0.3) 100%);
+  background: linear-gradient(135deg, #e2ceb1(31,41,55,0.92) 0%, #e2ceb1(49,72,95,0.75) 50%, #e2ceb1(91,125,177,0.3) 100%);
 }
 
 .hero-slide:nth-child(1) { background-image: url(''); }
@@ -105,7 +105,7 @@
 
 .btn-outline {
   background: transparent;
-  border: 2px solid rgba(255,255,255,0.3);
+  border: 2px solid #c7a07a(255,255,255,0.3);
   color: var(--white);
   padding: 12px 36px;
   font-size: 0.82rem;

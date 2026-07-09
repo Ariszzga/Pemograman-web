@@ -18,3 +18,5 @@ xampp/
 vendor/
 
 backend/config/db.php
+
+Index.html

@@ -1,30 +1,30 @@
 :root{
-  --bg:#31485F;--navy:#1F2937;--blue:#5B7DB1;
-  --soft:#CBAF87;--white:#1F2937;--gray:#6B7280;--light:#CBAF87;
+  --bg:#fdfce8;--navy:#fdfce8;--blue:#fdfce8;
+  --soft:#CBAF87;--white:#000000;--gray:#000000;--light:#CBAF87;
   --font:'Plus Jakarta Sans',system-ui,sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--font);background:var(--bg);color:#CBAF87;font-size:15px;line-height:1.6}
+body{font-family:var(--font);background:var(--bg);color:#000000;font-size:15px;line-height:1.6}
 a{text-decoration:none;color:inherit}
 img{display:block;max-width:100%}
  
 /* navigasi */
 nav{
   position:sticky;top:0;z-index:99;
-  background:#31485F;border-bottom:1px solid rgb(243, 247, 252);
+  background:#fdfce8;border-bottom:1px solid #391e10;
   padding:0 5%;height:60px;
   display:flex;align-items:center;justify-content:space-between
 }
 .nav-left{display:flex;align-items:center;gap:1.2rem}
-.nav-logo{font-size:1.3rem;font-weight:800;letter-spacing:.12em;color:#CBAF87}
-.nav-logo span{color:#CBAF87}
-.nav-tagline{font-size:.75rem;color:#CBAF87;border-left:1.5px solid rgb(232, 236, 242);padding-left:1rem;line-height:1.35;max-width:160px}
+.nav-logo{font-size:1.3rem;font-weight:800;letter-spacing:.12em;color:#000000}
+.nav-logo span{color:#000000}
+.nav-tagline{font-size:.75rem;color:#000000;border-left:1.5px solid rgb(232, 236, 242);padding-left:1rem;line-height:1.35;max-width:160px}
 .nav-right{display:flex;align-items:center;gap:.8rem}
 .nav-links{display:flex;gap:1.5rem;list-style:none}
-.nav-links a{font-size:.83rem;font-weight:600;color:#CBAF87;transition:color .2s}
-.nav-links a:hover,.nav-links a.active{color:var(--blue)}
-.nav-badge{background:#E7DEC8;color:#31485F;font-size:.78rem;font-weight:700;padding:.35rem 1rem;border-radius:100px}
+.nav-links a{font-size:.83rem;font-weight:600;color:#000000;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:#000000;font-weight:800}
+.nav-badge{background:#fdfce8;color:#000000;font-size:.78rem;font-weight:700;padding:.35rem 1rem;border-radius:100px}
 
 @media(max-width:520px){
   .prod-grid,.news-grid,.testi-grid{grid-template-columns:1fr}
@@ -33,7 +33,7 @@ nav{
 }
 
 #navbar.scrolled {
-  background: rgba(31,41,55,0.97);
+  background: #391e10;
   backdrop-filter: blur(12px);
   box-shadow: 0 2px 24px rgba(0,0,0,0.35);
   padding: 12px 0;
@@ -58,7 +58,7 @@ nav{
   letter-spacing: 3px;
   text-transform: uppercase;
 }
-.nav-logo span { color: var(--soft); }
+.nav-logo span { color: var(--white); }
 
 /* Menu */
 .nav-menu {
@@ -68,7 +68,7 @@ nav{
 }
 
 .nav-menu a {
-  color: var(--muted);
+  color: #000000;
   text-decoration: none;
   font-size: 0.8rem;
   font-weight: 500;
@@ -86,15 +86,15 @@ nav{
   transition: width 0.3s;
 }
 .nav-menu a:hover,
-.nav-menu a.active { color: var(--white); }
+.nav-menu a.active { color: var(--white); font-weight: 700; }
 .nav-menu a:hover::after,
 .nav-menu a.active::after { width: 100%; }
 
 /* Login */
 .nav-login {
-  background: var(--soft);
+  background: #fdfce8;
   border: none;
-  color: var(--navy);
+  color: #000000;
   padding: 8px 22px;
   font-size: 0.78rem;
   font-weight: 700;
@@ -132,7 +132,7 @@ nav{
     display: none;
     position: fixed;
     inset: 0;
-    background: var(--navy);
+    background: #391e10;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -152,7 +152,7 @@ nav{
 /* Offcanvas mobile links */
 .offcanvas-link {
   display: block;
-  color: var(--muted);
+  color: #000000;
   text-decoration: none;
   font-size: 1rem;
   font-weight: 600;
@@ -162,11 +162,11 @@ nav{
   border-bottom: 1px solid rgba(255,255,255,0.06);
   transition: color 0.3s;
 }
-.offcanvas-link:hover { color: var(--soft); }
+.offcanvas-link:hover { color: #000000; font-weight: 700; }
 
 /* Scrolled state via Bootstrap JS event — fallback CSS */
 .navbar.bg-scrolled {
-  background: rgba(31,41,55,0.97) !important;
+  background: #391e10 !important;
   backdrop-filter: blur(12px);
   box-shadow: 0 2px 24px rgba(0,0,0,0.35);
 }
