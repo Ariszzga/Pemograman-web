@@ -94,6 +94,7 @@ nav.scrolled{
     background: var(--bg);
     color: var(--butt);}
 
+.btn:hover::after { transform: scaleX(1); }
 
 #shop,
 #about,

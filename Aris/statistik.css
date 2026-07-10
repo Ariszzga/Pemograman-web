@@ -1,7 +1,7 @@
 /* ── STATISTIK ── */
 .stats {
   padding: 90px 0;
-  background: var(--navy);
+  background: var(--bg);
   position: relative;
   overflow: hidden;
 }
@@ -9,7 +9,7 @@
 .stats::before {
   content: '';
   position: absolute; inset: 0;
-  background:color(#391E10)
+  background:color var(--darkcok)
 }
 
 .stats-inner {
@@ -27,13 +27,13 @@
 .stats-eyebrow {
   font-size: 0.72rem; font-weight: 600;
   letter-spacing: 4px; text-transform: uppercase;
-  color: var(--soft); margin-bottom: 14px;
+  color: var(--text); margin-bottom: 14px;
 }
 
 .stats-title {
   font-size: clamp(1.6rem, 3vw, 2.4rem);
   font-weight: 700;
-  color: var(--black);
+  color: var(--text);
 }
 
 .stats-grid {
@@ -47,7 +47,7 @@
 }
 
 .stat-card {
-  background: var(--card2);
+  background: var(--lion);
   padding: 48px 24px;
   text-align: center;
   position: relative;
@@ -58,11 +58,11 @@
   position: absolute;
   bottom: 0; left: 0; right: 0;
   height: 3px;
-  background: var(--soft);
+  background: var(--bg);
   transform: scaleX(0);
   transition: transform 0.4s ease;
 }
-.stat-card:hover { background: #391E10(91,125,177,0.15); }
+.stat-card:hover { background: var(--butt); }
 .stat-card:hover::after { transform: scaleX(1); }
 
 .stat-icon { font-size: 1.8rem; margin-bottom: 18px; display: block; }
@@ -70,7 +70,7 @@
 .stat-number {
   font-size: clamp(2.2rem, 4vw, 3.4rem);
   font-weight: 700;
-  color: var(--soft);
+  color: var(--text);
   line-height: 1;
   margin-bottom: 10px;
 }
@@ -80,13 +80,13 @@
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--text);
   margin-bottom: 8px;
 }
 
 .stat-desc {
   font-size: 0.76rem;
-  color: #391E10(168,184,200,0.7);
+  color: var(--darkcok);
   line-height: 1.6;
 }
 

@@ -4,7 +4,7 @@
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background: var(--navy);
+  background: var(--bg);
 }
 
 .hero-slide {
@@ -17,13 +17,13 @@
   background-size: cover;
   background-position: center;
 }
-.hero-slide.active { opacity: 1; }
+.hero-slide.active { opacity: 5; }
 
 .hero-slide::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #e2ceb1(31,41,55,0.92) 0%, #e2ceb1(49,72,95,0.75) 50%, #e2ceb1(91,125,177,0.3) 100%);
+  background: linear-gradient(135deg, var(--bg) 0%, var(--bg) 50%, var(--bg) 100%);
 }
 
 .hero-slide:nth-child(1) { background-image: url(''); }
@@ -43,7 +43,7 @@
   font-weight: 600;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: var(--soft);
+  color: var(--text);
   margin-bottom: 20px;
   opacity: 0;
   transform: translateY(20px);
@@ -51,12 +51,12 @@
 }
 
 .hero-title {
-  font-family: var(--font);
+  font-family: var(--text);
   font-size: clamp(2.4rem, 5.5vw, 5rem);
   font-weight: 700;
   line-height: 1.1;
   margin-bottom: 24px;
-  color: var(--white);
+  color: var(--text);
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.6s 0.35s, transform 0.6s 0.35s;
@@ -64,7 +64,7 @@
 
 .hero-subtitle {
   font-size: 1rem;
-  color: var(--muted);
+  color: var(--text);
   max-width: 460px;
   line-height: 1.8;
   margin-bottom: 40px;
@@ -90,8 +90,8 @@
 }
 
 .btn-primary {
-  background: var(--soft);
-  color: var(--navy);
+  background: var(--lion);
+  color: var(--text);
   padding: 14px 36px;
   font-size: 0.82rem;
   font-weight: 700;
@@ -105,8 +105,8 @@
 
 .btn-outline {
   background: transparent;
-  border: 2px solid #c7a07a(255,255,255,0.3);
-  color: var(--white);
+  border: 2px solid var(--butt);
+  color: var(--text);
   padding: 12px 36px;
   font-size: 0.82rem;
   font-weight: 600;
@@ -116,7 +116,7 @@
   border-radius: 2px;
   transition: border-color 0.3s, background 0.3s;
 }
-.btn-outline:hover { border-color: var(--soft); background: rgba(203,175,135,0.1); }
+.btn-outline:hover { border-color: var(--butt); background: var(--butt); }
 
 /* Controls */
 .hero-controls {
@@ -141,7 +141,7 @@
   border-radius: 50%;
   transition: background 0.3s, border-color 0.3s;
 }
-.hero-btn:hover { background: var(--soft); color: var(--navy); border-color: var(--soft); }
+.hero-btn:hover { background: var(--bg); color: var(--bg); border-color: var(--lion); }
 
 .hero-dots { display: flex; gap: 8px; }
 .dot {
@@ -151,7 +151,7 @@
   cursor: pointer;
   transition: background 0.3s, transform 0.3s;
 }
-.dot.active { background: var(--soft); transform: scale(1.3); }
+.dot.active { background: var(--butt); transform: scale(1.3); }
 
 .hero-counter {
   position: absolute;
@@ -167,7 +167,7 @@
   position: absolute;
   bottom: 0; left: 0;
   height: 3px;
-  background: var(--soft);
+  background: var(--bg);
   width: 0%;
   transition: width 5s linear;
   z-index: 10;
@@ -192,9 +192,9 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg,
-    rgba(31,41,55,0.92) 0%,
-    rgba(49,72,95,0.72) 50%,
-    rgba(91,125,177,0.25) 100%);
+    var(--butt) 0%,
+    var(--butt) 50%,
+    var(--butt) 100%);
   z-index: 0;
 }
 
@@ -208,13 +208,13 @@
 .hero-indicators [data-bs-slide-to] {
   width: 8px; height: 8px;
   border-radius: 50%;
-  background: rgba(203,175,135,0.4) !important;
+  background: var(--butt);
   border: none;
   opacity: 1;
   transition: background 0.3s, transform 0.3s;
 }
 .hero-indicators .active {
-  background: var(--soft) !important;
+  background: var(--butt);
   transform: scale(1.3);
 }
 
@@ -222,10 +222,10 @@
 .hero-btn-prev,
 .hero-btn-next {
   width: 44px; height: 44px;
-  background: rgba(203,175,135,0.15) !important;
-  border: 1px solid rgba(203,175,135,0.4) !important;
+  background: var(--bg);
+  border: 1px solid var(--butt);
   border-radius: 50%;
-  color: var(--soft) !important;
+  color: var(--text);
   opacity: 1;
   top: 50%;
   transform: translateY(-50%);
@@ -235,12 +235,12 @@
 .hero-btn-next { right: 24px; }
 .hero-btn-prev:hover,
 .hero-btn-next:hover {
-  background: var(--soft) !important;
-  color: var(--navy) !important;
+  background: var(--lion);
+  color: var(--text);
 }
 .hero-btn-prev .bi,
 .hero-btn-next .bi { font-size: 1rem; }
 
 /* Override Bootstrap carousel-control icons */
 .hero-btn-prev .carousel-control-prev-icon,
-.hero-btn-next .carousel-control-next-icon { display: none; }
+.hero-btn-next .carousel-control-next-icon { display: fixed; }
