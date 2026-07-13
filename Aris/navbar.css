@@ -64,34 +64,25 @@ nav.scrolled{
     gap:.12rem}
 .btn-group{
     display: flex;
-    gap: 12px; /* Jarak antar tombol */}
+    gap: 12px; }
 
 .btn.btn-primary{
     background: transparent;
-    border: none;
-    color: var(--butt);}
-
-.btn.btn-primary.active{
-    background: var(--butt);
-    color: var(--bg);}
-.btn.btn-primary.active::after{
-    background: var(--bg);
+    border: 1px solid #8B5E3C;
+    color: var(--text);
+    padding: 8px 18px;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: background-color .35s ease,
+                color .35s ease,
+                border-color .35s ease;
 }
 
-.btn{
-    background: transparent;
-    border:10px #8B5E3C;
-    color:var(--text);
-    border: 1px solid #8B5E3C;
-    border-right: 1px solid #8B5E3C;
-    transition: all .3s ease;}
-
-.btn:hover{
+.btn.btn-primary:hover{
     border-color: var(--butt);
     background: var(--butt);
-    color: var(--bg);}
-
-.btn:hover::after { transform: scaleX(1); }
+    color: var(--bg);
+}
 
 #shop,
 #about,
@@ -100,18 +91,9 @@ nav.scrolled{
 #chart{
     scroll-margin-top: 80px;}
 
-.btn.btn-primary,
-.btn.btn-primary:hover,
-.btn.btn-primary:focus,
-.btn.btn-primary:active,
-.btn.btn-primary.active{
-    background: transparent !important;
-    border: 5px solid #8B5E3C !important;
-    color: var(--text) !important;
-    box-shadow: none !important;
-}
-
-.btn.current{
-    background: #8B5E3C !important;
-    color: var(--text) !important;
+/* Tombol navigasi aktif: warna --butt, kembali transparan begitu pindah section */
+.btn.btn-primary.current{
+    background: var(--butt);
+    border-color: var(--butt);
+    color: var(--bg);
 }
