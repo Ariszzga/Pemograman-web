@@ -58,6 +58,16 @@
   transition: opacity 0.3s;
   font-family: var(--font);
 }
+
+.newsletter-input:focus {
+  outline: none;
+  border-color: var(--butt);
+}
+
+.newsletter-form:has(.newsletter-input:focus) {
+  border-color: var(--butt);
+}
+
 .newsletter-submit:hover { opacity: 0.85; }
 
 .newsletter-success {

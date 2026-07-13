@@ -67,12 +67,12 @@ fetch('backend/api/products.php')
 
     <div class="nav-right">
         <div><div class="btn-group">
-    <a href="#home" class="btn nav-link current">Home</a>
-    <a href="#about" class="btn btn-primary nav-link">About</a>
-    <a href="#shop" class="btn btn-primary nav-link">Shop</a>
-    <a href="#" class="btn btn-primary nav-link">FAQ</a>
-    <a href="#contact" class="btn btn-primary nav-link">Contact</a>
-    <a href="#" class="btn btn-primary nav-link" class="nav-badge">Chart</a>
+    <a href="#home" class="btn btn-primary nav-link current">Home</a>
+    <a href="#about" class="btn btn-primary nav-link current ">About</a>
+    <a href="#shop" class="btn btn-primary nav-link current">Shop</a>
+    <a href="#" class="btn btn-primary nav-link current">FAQ</a>
+    <a href="#contact" class="btn btn-primary nav-link current">Contact</a>
+    <a href="#" class="btn btn-primary nav-link current" class="nav-badge">Foto Kami</a>
   </div></div>
     
   </div>
@@ -252,7 +252,7 @@ fetch('backend/api/products.php')
         <div class="stat-card">
           <span class="stat-icon">icon</span>
           <div class="stat-number">
-            <span class="counter" data-target="10" data-suffix="K+">0</span>
+            <span class="counter" data-target="10" data-suffix="K+">1000+</span>
           </div>
           <p class="stat-label">Produk Terjual</p>
           <p class="stat-desc">Lebih dari 1 ribu produk berhasil terjual.</p>
@@ -261,7 +261,7 @@ fetch('backend/api/products.php')
         <div class="stat-card">
           <span class="stat-icon">icon</span>
           <div class="stat-number">
-            <span class="counter" data-target="8500" data-suffix="+">0</span>
+            <span class="counter" data-target="8500" data-suffix="+">20+</span>
           </div>
           <p class="stat-label">Pelanggan Setia</p>
           <p class="stat-desc">Pelanggan yang senantiasa mencari kami</p>
@@ -270,7 +270,7 @@ fetch('backend/api/products.php')
         <div class="stat-card">
           <span class="stat-icon">icon</span>
           <div class="stat-number">
-            <span class="counter" data-target="4" data-decimals="1" data-suffix="/5">0</span>
+            <span class="counter" data-target="4" data-decimals="1" data-suffix="/5">4.7</span>
           </div>
           <p class="stat-label">Rating Rata-rata</p>
           <p class="stat-desc">Dinilai dari ribuan ulasan jujur pelanggan kami</p>
@@ -279,9 +279,9 @@ fetch('backend/api/products.php')
         <div class="stat-card">
           <span class="stat-icon">icon</span>
           <div class="stat-number">
-            <span class="counter" data-target="34" data-suffix=" Kota">0</span>
+            <span class="counter" data-target="34" data-suffix=" Kota">50+</span>
           </div>
-          <p class="stat-label">Jangkauan dalam Kota</p>
+          <p class="stat-label">Jangkauan luar Kota</p>
           <p class="stat-desc">Pengiriman online tersedia</p>
         </div>
       </div>
@@ -609,6 +609,7 @@ function handleSubscribe(e) {
     if (res.status === 'success') {
       form.style.display    = 'none';
       success.style.display = 'block';
+      alert = 'text'
     } else {
       alert(res.message);
       btn.textContent = 'Subscribe';

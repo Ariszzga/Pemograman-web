@@ -37,8 +37,8 @@
 .about-badge {
   position: absolute;
   top: 28px; left: -18px;
-  background: var(--soft);
-  color: var(--navy);
+  background: var(--butt);
+  color: var(--darkcok);
   padding: 16px 18px;
   text-align: center;
   border-radius: 4px;
@@ -50,7 +50,7 @@
 .about-eyebrow {
   font-size: 0.72rem; font-weight: 600;
   letter-spacing: 4px; text-transform: uppercase;
-  color: var(--soft); margin-bottom: 18px;
+  color: var(--butt); margin-bottom: 18px;
 }
 
 .about-title {
@@ -58,11 +58,11 @@
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 24px;
-  color: var(--black);
+  color: var(--text);
 }
 
 .about-desc {
-  color: var(--black);
+  color: var(--text);
   line-height: 1.9;
   font-size: 0.94rem;
   margin-bottom: 18px;
@@ -76,19 +76,19 @@
 }
 
 .about-value {
-  background: var(--card);
-  border-left: 3px solid var(--soft);
+  background: var(--lion);
+  border-left: 3px solid var(--butt);
   padding: 14px 16px;
   border-radius: 0 4px 4px 0;
 }
-.about-value strong { display: block; font-size: 0.84rem; font-weight: 600; margin-bottom: 4px; color: var(--black); }
-.about-value span   { font-size: 0.76rem; color: var(--black); }
+.about-value strong { display: block; font-size: 0.84rem; font-weight: 600; margin-bottom: 4px; color: var(--text); }
+.about-value span   { font-size: 0.76rem; color: var(--text); }
 
 .btn-about {
   display: inline-block;
   background: transparent;
-  border: 2px solid var(--soft);
-  color: var(--soft);
+  border: 2px solid var(--butt);
+  color: var(--butt);
   padding: 12px 34px;
   font-size: 0.78rem;
   font-weight: 700;
@@ -98,7 +98,7 @@
   border-radius: 2px;
   transition: background 0.3s, color 0.3s;
 }
-.btn-about:hover { background: var(--soft); color: var(--black); }
+.btn-about:hover { background: var(--butt); color: var(--text); }
 
 @media (max-width: 900px) {
   .about-inner { grid-template-columns: 1fr; gap: 60px; }

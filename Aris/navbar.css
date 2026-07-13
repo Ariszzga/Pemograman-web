@@ -37,7 +37,7 @@ nav{
 
 nav.scrolled{
     background:#A87449;
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
 }
 
 .nav-left{
@@ -66,33 +66,30 @@ nav.scrolled{
     display: flex;
     gap: 12px; /* Jarak antar tombol */}
 
-.btn{
-    display: inline-block;
-    padding: 20px 20px;
-    border-radius: 100px;
-    transition: all .3s ease;}
 .btn.btn-primary{
     background: transparent;
     border: none;
-    color: var(--text);}
+    color: var(--butt);}
 
 .btn.btn-primary.active{
-    background: #8B5E3C;
-    color: white;}
+    background: var(--butt);
+    color: var(--bg);}
+.btn.btn-primary.active::after{
+    background: var(--bg);
+}
 
 .btn{
     background: transparent;
-    border:1px solid #8B5E3C;
+    border:10px #8B5E3C;
     color:var(--text);
     border: 1px solid #8B5E3C;
     border-right: 1px solid #8B5E3C;
-    transition: all .3s ease-in-out;
     transition: all .3s ease;}
 
 .btn:hover{
-    border-color: var(--lion);
-    background: var(--bg);
-    color: var(--butt);}
+    border-color: var(--butt);
+    background: var(--butt);
+    color: var(--bg);}
 
 .btn:hover::after { transform: scaleX(1); }
 
@@ -109,7 +106,7 @@ nav.scrolled{
 .btn.btn-primary:active,
 .btn.btn-primary.active{
     background: transparent !important;
-    border: 1px solid #8B5E3C !important;
+    border: 5px solid #8B5E3C !important;
     color: var(--text) !important;
     box-shadow: none !important;
 }
