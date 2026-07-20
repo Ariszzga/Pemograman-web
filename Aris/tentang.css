@@ -1,111 +1,147 @@
-/* ── TENTANG BRAND ── */
-.about {
-  padding: 110px 0;
-  background: var(--bg);
+/* ===================== ABOUT ===================== */
+.about{
+  padding:110px 0 80px;
+  background:var(--bg);
 }
 
-.about-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 40px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
+.about-inner{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 40px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:center;
 }
 
-.about-visual { position: relative; }
+.about-visual{ position:relative; }
 
-.about-img-main {
-  width: 100%;
-  aspect-ratio: 4/5;
-  object-fit: cover;
-  display: block;
-  border-radius: 4px;
+.about-img-main{
+  width:100%;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  display:block;
+  border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-medium);
 }
 
-.about-img-accent {
-  position: absolute;
-  bottom: -28px; right: -28px;
-  width: 42%;
-  aspect-ratio: 1;
-  object-fit: cover;
-  border: 4px solid var(--bg);
-  border-radius: 4px;
+.about-img-accent{
+  position:absolute;
+  bottom:-28px; right:-28px;
+  width:42%;
+  aspect-ratio:1;
+  object-fit:cover;
+  border:5px solid var(--bg);
+  border-radius:var(--radius-md);
+  box-shadow:var(--shadow-soft);
 }
 
-.about-badge {
-  position: absolute;
-  top: 28px; left: -18px;
-  background: var(--butt);
-  color: var(--darkcok);
-  padding: 16px 18px;
-  text-align: center;
-  border-radius: 4px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+.about-badge{
+  position:absolute;
+  top:28px; left:-18px;
+  background:var(--butt);
+  color:var(--bg);
+  padding:16px 18px;
+  text-align:center;
+  border-radius:var(--radius-sm);
+  box-shadow:0 10px 26px rgba(57,30,16,.25);
 }
-.about-badge strong { display: block; font-size: 2rem; font-weight: 700; line-height: 1; }
-.about-badge span   { font-size: 0.6rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; }
+.about-badge strong{ display:block; font-size:2rem; font-weight:700; line-height:1; }
+.about-badge span{ font-size:.6rem; letter-spacing:2px; text-transform:uppercase; font-weight:600; }
 
-.about-eyebrow {
-  font-size: 0.72rem; font-weight: 600;
-  letter-spacing: 4px; text-transform: uppercase;
-  color: var(--butt); margin-bottom: 18px;
-}
-
-.about-title {
-  font-size: clamp(1.8rem, 3vw, 2.6rem);
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 24px;
-  color: var(--text);
+.about-title{
+  font-size:clamp(1.9rem,3.2vw,2.7rem);
+  font-weight:700;
+  line-height:1.25;
+  margin-bottom:22px;
+  color:var(--text);
 }
 
-.about-desc {
-  color: var(--text);
-  line-height: 1.9;
-  font-size: 0.94rem;
-  margin-bottom: 18px;
+.about-desc{
+  color:var(--darkcok);
+  line-height:1.9;
+  font-size:.96rem;
+  margin-bottom:16px;
 }
 
-.about-values {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin: 32px 0;
+.btn-about{
+  display:inline-block;
+  margin-top:12px;
+  background:transparent;
+  border:2px solid var(--butt);
+  color:var(--butt);
+  padding:13px 34px;
+  font-size:.78rem;
+  font-weight:700;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  border-radius:999px;
+  transition:background .3s, color .3s;
+}
+.btn-about:hover{ background:var(--butt); color:var(--bg); }
+
+@media(max-width:900px){
+  .about-inner{ grid-template-columns:1fr; gap:60px; }
+  .about-visual{ max-width:480px; margin:0 auto; }
+}
+@media(max-width:500px){
+  .about-inner{ padding:0 22px; }
+  .about-img-accent{ display:none; }
 }
 
-.about-value {
-  background: var(--lion);
-  border-left: 3px solid var(--butt);
-  padding: 14px 16px;
-  border-radius: 0 4px 4px 0;
+/* ===================== KEUNGGULAN ===================== */
+.keunggulan{
+  padding:80px 0;
+  background:linear-gradient(180deg, var(--bg) 0%, rgba(203,175,135,.14) 100%);
 }
-.about-value strong { display: block; font-size: 0.84rem; font-weight: 600; margin-bottom: 4px; color: var(--text); }
-.about-value span   { font-size: 0.76rem; color: var(--text); }
 
-.btn-about {
-  display: inline-block;
-  background: transparent;
-  border: 2px solid var(--butt);
-  color: var(--butt);
-  padding: 12px 34px;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 2px;
-  transition: background 0.3s, color 0.3s;
+.keunggulan-grid{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 40px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
 }
-.btn-about:hover { background: var(--butt); color: var(--text); }
 
-@media (max-width: 900px) {
-  .about-inner { grid-template-columns: 1fr; gap: 60px; }
-  .about-visual { max-width: 480px; margin: 0 auto; }
+.keunggulan-card{
+  background:var(--bg);
+  border:1px solid rgba(203,175,135,.4);
+  border-left:3px solid var(--butt);
+  border-radius:var(--radius-md);
+  padding:26px 22px;
+  box-shadow:var(--shadow-soft);
+  transition:transform .3s ease, box-shadow .3s ease;
 }
-@media (max-width: 500px) {
-  .about-inner { padding: 0 24px; }
-  .about-values { grid-template-columns: 1fr; }
-  .about-img-accent { display: none; }
+.keunggulan-card:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow-medium);
+}
+.keunggulan-icon{
+  width:46px; height:46px;
+  border-radius:50%;
+  background:var(--lion);
+  color:var(--darkcok);
+  display:flex; align-items:center; justify-content:center;
+  font-size:1.15rem;
+  margin-bottom:16px;
+}
+.keunggulan-card strong{
+  display:block;
+  font-size:.98rem;
+  font-weight:700;
+  margin-bottom:6px;
+  color:var(--text);
+}
+.keunggulan-card span{
+  font-size:.83rem;
+  color:var(--darkcok);
+  line-height:1.6;
+}
+
+@media(max-width:900px){
+  .keunggulan-grid{ grid-template-columns:1fr 1fr; padding:0 24px; }
+}
+@media(max-width:480px){
+  .keunggulan-grid{ grid-template-columns:1fr; }
 }

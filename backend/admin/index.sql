@@ -13,7 +13,7 @@ USE PW;
 CREATE TABLE IF NOT EXISTS products (
   id         INT AUTO_INCREMENT PRIMARY KEY,
   name       VARCHAR(150) NOT NULL,
-  category   ENUM('atasan','bawahan','outer','dress') NOT NULL,
+  category   ENUM('bokoran','sokasi','tas') NOT NULL,
   price      INT NOT NULL,
   price_old  INT DEFAULT NULL,
   badge      VARCHAR(50) DEFAULT NULL,
@@ -53,37 +53,34 @@ CREATE TABLE IF NOT EXISTS newsletter_subscribers (
 );
 
 -- ============================================
--- DATA AWAL PRODUK
+-- DATA AWAL PRODUK (sesuai asset/ website "Bokor Anyaman")
 -- ============================================
 INSERT INTO products (name, category, price, price_old, badge, image_url, rating) VALUES
-('Blouse Linen Premium',  'atasan',  185000, 230000, 'New',
- 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500', 4.8),
-('Midi Wrap Dress',       'dress',   295000, NULL,   'Best Seller',
- 'https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=500', 4.9),
-('Oversized Blazer',      'outer',   350000, NULL,   NULL,
- 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=500', 4.7),
-('Wide Leg Trousers',     'bawahan', 220000, 280000, 'Sale',
- 'https://images.unsplash.com/photo-1594938298603-e8d9b6a2c61b?w=500', 4.6),
-('Kemeja Batik Modern',   'atasan',  265000, NULL,   NULL,
- 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=500', 4.8),
-('Floral Mini Dress',     'dress',   245000, NULL,   'New',
- 'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=500', 4.9),
-('Knit Cardigan',         'outer',   195000, NULL,   NULL,
- 'https://images.unsplash.com/photo-1548126032-079a0fb0099d?w=500', 4.7),
-('Pleated Midi Skirt',    'bawahan', 175000, NULL,   NULL,
- 'https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=500', 4.5);
+('Bokoran Bulat Penyalin',   'bokoran', 290000, NULL,   'Best Seller', 'asset/bokoran-bulat-penyalin.png', 4.8),
+('Bokoran Kotak Penyalin',   'bokoran', 320000, NULL,   NULL,          'asset/bokoran-kotak-penyalin.png', 4.7),
+('Bokoran Penyalin Kecil',   'bokoran', 185000, 220000, 'Sale',        'asset/bokoran-penyalin-kecil.png', 4.6),
+('Sokasi Bola Besar',        'sokasi',  350000, NULL,   NULL,          'asset/sokasi-bola-besar.png', 4.8),
+('Sokasi Bola Kecil',        'sokasi',  220000, NULL,   'New',         'asset/sokasi-bola-kecil.png', 4.7),
+('Sokasi Kulit Sintetis',    'sokasi',  260000, NULL,   NULL,          'asset/sokasi-kulit-sintetis.png', 4.5),
+('Sokasi Penyalin Kecil',    'sokasi',  185000, 210000, 'Sale',        'asset/sokasi-penyalin-kecil.png', 4.6),
+('Tas Aban-aban Finil',      'tas',     150000, NULL,   NULL,          'asset/tas-abanaban-finil.png', 4.5),
+('Tas Aban-aban Gold',       'tas',     210000, NULL,   'New',         'asset/tas-abanaban-gold.png', 4.9),
+('Tas Aban-aban Silver',     'tas',     195000, NULL,   NULL,          'asset/tas-abanaban-silver.png', 4.7),
+('Tas Kwangen Bola',         'tas',     175000, NULL,   NULL,          'asset/tas-kwangen-bola.png', 4.6),
+('Tas Set 2 Kerang Bola',    'tas',     280000, 310000, 'Sale',        'asset/tas-set2-kerang-bola.png', 4.8),
+('Tas Set 2 Penyalin',       'tas',     240000, NULL,   'Best Seller', 'asset/tas-set2-penyalin.png', 4.9);
 
 -- DATA AWAL TESTIMONI
 INSERT INTO testimonials (name, city, rating, message, avatar_url) VALUES
-('Sari Dewi',    'Jakarta',    5, 'Kualitas bahannya jauh di atas ekspektasi saya. Blazer yang saya beli terasa premium banget!', 'https://i.pravatar.cc/100?img=5'),
-('Mira Kusuma',  'Surabaya',   5, 'Pengiriman cepat banget! Packaging cantik, berasa dapat hadiah.',                              'https://i.pravatar.cc/100?img=9'),
-('Rina Amalia',  'Bandung',    4, 'Sudah 3 kali beli dan selalu puas. Size guide-nya akurat!',                                    'https://i.pravatar.cc/100?img=25'),
-('Ayu Lestari',  'Yogyakarta', 5, 'Koleksi VESTI selalu bikin kalap. Desainnya timeless tapi tetap modern!',                     'https://i.pravatar.cc/100?img=47'),
-('Nadia Putri',  'Medan',      5, 'Harga sepadan kualitas. Produk VESTI melebihi ekspektasi saya. Recommended!',                  'https://i.pravatar.cc/100?img=20');
+('Sari Dewi',    'Jakarta',    5, 'Kualitas anyamannya rapi banget, cocok buat upacara maupun dekorasi rumah.', 'https://i.pravatar.cc/100?img=5'),
+('Mira Kusuma',  'Surabaya',   5, 'Pengiriman cepat dan packaging aman, bokorannya nggak ada yang rusak.', 'https://i.pravatar.cc/100?img=9'),
+('Rina Amalia',  'Bandung',    4, 'Sudah 3 kali beli sokasi di sini, kualitasnya konsisten bagus.', 'https://i.pravatar.cc/100?img=25'),
+('Ayu Lestari',  'Yogyakarta', 5, 'Tas aban-abannya cantik, detail anyamannya halus dan kuat.', 'https://i.pravatar.cc/100?img=47'),
+('Nadia Putri',  'Medan',      5, 'Harga sepadan dengan kualitas, produk kerajinan Bali asli.', 'https://i.pravatar.cc/100?img=20');
 
 -- DATA AWAL BLOG
 INSERT INTO blogs (title, excerpt, tag, author, image_url, is_featured) VALUES
-('Palette Warna yang Mendominasi Fashion 2025', 'Dari earthy tone hingga bold jewel tones.', 'trend', 'Rania S.', 'https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=900', 1),
-('Cara Mix & Match Outfit Monokrom',            'Tips agar tetap stylish dan tidak membosankan.', 'style', 'Dira A.', 'https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=300', 0),
-('Tips Merawat Baju Berbahan Linen',            'Panduan agar linen tahan lama dan tetap rapi.', 'tips', 'Sinta R.', 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300', 0),
-('VESTI x Designer Lokal: Kolaborasi Spesial',  'Kolaborasi eksklusif bersama desainer berbakat.', 'news', 'Tim VESTI', 'https://images.unsplash.com/photo-1445205170230-053b83016050?w=300', 0);
+('Sejarah dan Makna Bokoran dalam Upacara Bali', 'Mengenal fungsi bokoran dalam tradisi masyarakat Bali.', 'trend', 'Rania S.', 'https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=900', 1),
+('Cara Merawat Anyaman Bambu Agar Tahan Lama',    'Tips menjaga sokasi dan bokoran tetap awet.', 'tips', 'Dira A.', 'https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=300', 0),
+('Perbedaan Sokasi, Bokoran, dan Tas Anyaman',    'Panduan mengenal jenis-jenis kerajinan anyaman Bali.', 'style', 'Sinta R.', 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300', 0),
+('Kolaborasi Bersama Pengrajin Anyaman Lokal',    'Kolaborasi eksklusif bersama pengrajin anyaman Bali.', 'news', 'Tim Bokor Anyaman', 'https://images.unsplash.com/photo-1445205170230-053b83016050?w=300', 0);

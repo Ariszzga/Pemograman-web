@@ -1,0 +1,134 @@
+/* ===================================================================
+   BASE — variabel warna resmi, reset, tipografi, aksesibilitas
+   JANGAN ubah nilai variabel warna di bawah ini (identitas brand).
+=================================================================== */
+:root{
+  --bg:#fdfce8;
+  --dun:#fdfce8;
+  --lion:#CBAF87;
+  --darkcok:#391e10;
+  --text:#000000;
+  --butt:#f1930fe9;
+
+  /* turunan non-identitas: hanya opacity/gradasi dari warna di atas */
+  --bg-glass: rgba(253,252,232,.85);
+  --shadow-soft: 0 10px 30px rgba(57,30,16,.10);
+  --shadow-medium: 0 18px 40px rgba(57,30,16,.16);
+  --radius-lg: 22px;
+  --radius-md: 14px;
+  --radius-sm: 8px;
+  --font-heading:'Cormorant Garamond', serif;
+  --font-body:'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+*,*::before,*::after{ box-sizing:border-box; }
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:84px;
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font-body);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  -webkit-tap-highlight-color:transparent;
+}
+
+img{ max-width:100%; display:block; }
+
+h1,h2,h3,h4{ font-family:var(--font-heading); margin:0; }
+
+a{ color:inherit; text-decoration:none; -webkit-tap-highlight-color:transparent; }
+
+ul{ margin:0; padding:0; list-style:none; }
+
+button{
+  font-family:inherit;
+  cursor:pointer;
+  -webkit-tap-highlight-color:transparent;
+}
+
+section{ scroll-margin-top:84px; }
+
+/* -------------------------------------------------------------
+   FIX WAJIB: hilangkan seluruh highlight/focus biru bawaan
+   browser & Bootstrap pada tautan, tombol, dan elemen interaktif.
+   Warna aktif/hover HARUS var(--butt).
+------------------------------------------------------------- */
+a, button, input, textarea, select, .btn, .btn-primary, .btn-outline{
+  outline:none;
+}
+
+a:focus, a:active, a:visited,
+button:focus, button:active,
+.btn:focus, .btn:active,
+.btn-primary:focus, .btn-primary:active,
+.btn-outline:focus, .btn-outline:active{
+  outline:none;
+  box-shadow:none !important;
+  background-color:inherit;
+}
+
+:focus-visible{
+  outline:2px solid var(--butt);
+  outline-offset:3px;
+}
+
+/* Netralkan sisa style Bootstrap (btn, focus ring biru, dsb) supaya
+   tidak bentrok dengan identitas warna kustom. */
+.btn.btn-primary,
+.btn.btn-primary:hover,
+.btn.btn-primary:focus,
+.btn.btn-primary:active,
+.btn.btn-primary.active{
+  box-shadow:none !important;
+}
+.btn-check:focus + .btn, .btn:focus{
+  box-shadow:none !important;
+}
+
+::selection{
+  background:var(--butt);
+  color:var(--bg);
+}
+
+.container{
+  max-width:1240px;
+  margin:0 auto;
+  padding:0 40px;
+}
+
+.eyebrow{
+  font-size:.72rem;
+  font-weight:700;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  color:var(--butt);
+  margin-bottom:14px;
+  display:inline-block;
+}
+
+.section-heading{
+  text-align:center;
+  max-width:640px;
+  margin:0 auto 56px;
+}
+.section-heading h2{
+  font-size:clamp(1.8rem,3.4vw,2.6rem);
+  font-weight:700;
+  color:var(--text);
+  margin-top:8px;
+}
+.section-heading p{
+  margin-top:14px;
+  color:var(--darkcok);
+  font-size:.98rem;
+}
+
+@media(max-width:768px){
+  .container{ padding:0 22px; }
+}
