@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Aris/footer.css">
-    <link rel="stylesheet" href="Aris/HeroSection.css">
-    <link rel="stylesheet" href="Aris/navbar.css">
+    <link rel="stylesheet" href="DekWid/HeroSection.css">
+    <link rel="stylesheet" href="DekWid/navbar.css">
     <link rel="stylesheet" href="Aris/statistik.css">
     <link rel="stylesheet" href="Aris/tentang.css">
     <link rel="stylesheet" href="DekWid/produk.css">
@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="Aris/about.css">
     <link rel="stylesheet" href="Aris/base.css">
     <link rel="stylesheet" href="DekWid/kontak.css">
-    <link rel = "stylesheet" href="DekWid/testimoni.css">
+    <link rel = "stylesheet" href="Darma/testimoni.css">
+    <link rel="stylesheet" href="Darma/newsletter.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     
@@ -25,8 +26,11 @@
   <!-- navigasi -->
 <nav class="site-nav" id="siteNav">
   <div class="nav-left">
-    <div class="nav-logo">Bokor<span>.</span>Anyaman</div>
-  </div>
+  <a href="/" class="nav-logo">
+    <img src="asset/logo.png" alt="" class="logo-img">
+    <span>MOZAIK</span>
+  </a>
+</div>
 
   <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
     <i class="fa-solid fa-bars"></i>
@@ -115,14 +119,13 @@
 
     <div class="about-text">
       <p class="eyebrow">Tentang Kami</p>
-      <h2 class="about-title">Kreasi Anyaman<br>Bernilai Seni Khas Bali</h2>
+      <h2 class="about-title">MOZAIK<br>Bali Kerang</h2>
 
       <p class="about-desc">
-        Kami menghadirkan berbagai kerajinan anyaman khas Bali seperti bokoran, sokasi,
-        tas aban-aban, dulang, dan berbagai produk lainnya yang dibuat dengan penuh
-        ketelitian oleh pengrajin lokal. Setiap karya merupakan perpaduan antara
-        keterampilan tradisional dan sentuhan seni yang menghasilkan produk unik,
-        fungsional, serta memiliki nilai budaya yang tinggi.
+        MOZAIK Bali Kerang merupakan usaha kerajinan dari Tabanan, Bali, yang
+        menghadirkan karya dekoratif dengan keindahan alami kerang. Setiap produk
+        dibuat dengan ketelitian untuk menampilkan karakter khas Bali yang unik,
+        elegan, dan bernilai seni.
       </p>
 
       <p class="about-desc">
@@ -137,6 +140,7 @@
 
   </div>
 </section>
+
 
 <!-- Keunggulan -->
 <section id="keunggulan" class="keunggulan">
@@ -193,7 +197,7 @@
 
       <div class="stats-grid">
         <div class="stat-card">
-          <span class="stat-icon">icon</span>
+          <span class="stat-icon"></span>
           <div class="stat-number">
             <span class="counter" data-target="10" data-suffix="K+">1000+</span>
           </div>
@@ -202,7 +206,7 @@
         </div>
 
         <div class="stat-card">
-          <span class="stat-icon">icon</span>
+          <span class="stat-icon"></span>
           <div class="stat-number">
             <span class="counter" data-target="8500" data-suffix="+">20+</span>
           </div>
@@ -211,7 +215,7 @@
         </div>
 
         <div class="stat-card">
-          <span class="stat-icon">icon</span>
+          <span class="stat-icon"></span>
           <div class="stat-number">
             <span class="counter" data-target="4" data-decimals="1" data-suffix="/5">4.7</span>
           </div>
@@ -220,7 +224,7 @@
         </div>
 
         <div class="stat-card">
-          <span class="stat-icon">icon</span>
+          <span class="stat-icon"></span>
           <div class="stat-number">
             <span class="counter" data-target="34" data-suffix=" Kota">50+</span>
           </div>
@@ -245,37 +249,38 @@
 
   <div class="gallery-grid">
     <div class="gallery-card">
-      <div class="gallery-empty"></div>
+      <div class="gallery-photo-wrap">
+        <img class="gallery-photo" src="asset/Dekwid.png" alt="Foto Owner 1, Dekwid" loading="lazy">
+      </div>
       <div class="gallery-info">
-        <h3>Owner 1</h3>
-        <p>Tempatkan foto owner pertama di sini nanti.</p>
+        <p class="gallery-role">Owner</p>
+        <h3>I Made Widnyana</h3>
+        <p>Bagian dari tim MOZAIK Bali Kerang Developer website.</p>
       </div>
     </div>
 
     <div class="gallery-card">
-      <div class="gallery-empty"></div>
+      <div class="gallery-photo-wrap">
+        <img class="gallery-photo" src="asset/Darma.png" alt="Foto Owner 2, Darma" loading="lazy">
+      </div>
       <div class="gallery-info">
-        <h3>Owner 2</h3>
-        <p>Tempatkan foto owner kedua di sini nanti.</p>
+        <p class="gallery-role">Team Support</p>
+        <h3>I Ketut Darma Yasa</h3>
+        <p>Bagian dari tim MOZAIK Bali Kerang Developer website.</p>
       </div>
     </div>
 
     <div class="gallery-card">
-      <div class="gallery-empty"></div>
+      <div class="gallery-photo-wrap">
+        <img class="gallery-photo" src="asset/Aris.png" alt="Foto Owner 3, Aris" loading="lazy">
+      </div>
       <div class="gallery-info">
-        <h3>Owner 3</h3>
-        <p>Tempatkan foto owner ketiga di sini nanti.</p>
+        <p class="gallery-role">Team Support</p>
+        <h3> I Gede Aris Prayoga</h3>
+        <p>Bagian dari tim MOZAIK Bali Kerang Developer website.</p>
       </div>
     </div>
 
-    <div class="gallery-card">
-      <div class="gallery-empty"></div>
-      <div class="gallery-info">
-        <h3>Foto Bersama</h3>
-        <p>Tempatkan foto kebersamaan kami bertiga di sini nanti.</p>
-      </div>
-    </div>
-  </div>
 </section>
 
 
@@ -507,7 +512,7 @@
 </button>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-<script src="Darma/main.js"> </script>
+<script src="Aris/main.js"> </script>
 
 </body>
 </html>
