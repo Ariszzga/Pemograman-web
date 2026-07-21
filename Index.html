@@ -14,9 +14,11 @@
     <link rel="stylesheet" href="Aris/about.css">
     <link rel="stylesheet" href="Aris/base.css">
     <link rel="stylesheet" href="DekWid/kontak.css">
+    <link rel = "stylesheet" href="DekWid/testimoni.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <title>Bokor Anyaman</title>
+    
+    <title> Bokor Anyaman</title>
 </head>
 
 <body>
@@ -318,16 +320,80 @@
     <h2>Testimoni Pelanggan</h2>
   </div>
 
-  <div class="testimoni-grid">
-      <p class="testimoni-empty">Belum ada testimoni. Data akan tampil otomatis setelah tabel <code>testimonials</code> terisi.</p>
-        <div class="testimoni-card">
-          <div class="testimoni-rating">
+<section class="testimonial-section py-5" id="testimoni">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Apa Kata Pelanggan?</h2>
+      <p class="section-subtitle">
+        Kepuasan pelanggan adalah kebanggaan kami.
+      </p>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Testimoni 1 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="testimonial-card h-100">
+          <div class="stars">
+            ★★★★★
           </div>
-          <p class="testimoni-message">&ldquo;<?= htmlspecialchars($t['message']) ?>&rdquo;</p>
-          <div class="testimoni-user">
-            
+          <p class="testimonial-text">
+            "Dulang yang saya pesan sangat rapi dan detail ukirannya.
+            Sangat cocok untuk perlengkapan upacara di rumah. Pengiriman
+            juga aman dan cepat."
+          </p>
+
+          <div class="testimonial-user">
+            <div>
+              <h5>Ni Luh Sari</h5>
+              <span>Denpasar</span>
+            </div>
           </div>
         </div>
+      </div>
+
+      <!-- Testimoni 2 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="testimonial-card h-100">
+          <div class="stars">
+            ★★★★★
+          </div>
+          <p class="testimonial-text">
+            "Kualitas sokasi dan bokornya luar biasa. Finishing halus,
+            kuat, dan terlihat sangat elegan. Sudah beberapa kali
+            memesan dan selalu puas."
+          </p>
+
+          <div class="testimonial-user">
+            <div>
+              <h5>I Made Dharma</h5>
+              <span>Gianyar</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimoni 3 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="testimonial-card h-100">
+          <div class="stars">
+            ★★★★★
+          </div>
+          <p class="testimonial-text">
+            "Produk anyamannya sangat berkualitas. Cocok dijadikan
+            dekorasi rumah maupun hadiah. Pelayanan ramah dan responsif."
+          </p>
+
+          <div class="testimonial-user">
+            <div>
+              <h5>Komang Ayu</h5>
+              <span>Badung</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -440,45 +506,6 @@
   <i class="fa-solid fa-arrow-up"></i>
 </button>
 
-<script>// (dijalankan setelah seluruh DOM siap)
-fetch('backend/api/products.php')
-  .then(r => r.json())
-  .then(res => {
-    const grid = document.getElementById('productsGrid');
-    if (!grid || !res.data || res.data.length === 0) return;
-
-    const items = res.data;
-    const hero = items[0];
-    const rest = items.slice(1);
-
-    const rupiah = (n) => 'Rp' + parseInt(n).toLocaleString('id-ID');
-
-    const heroHTML = `
-      <div class="produk-hero">
-        <img src="${hero.image_url}" alt="${hero.name}">
-        <div class="produk-overlay">
-          <h2>${hero.name}</h2>
-          <p>Kerajinan anyaman khas Bali yang dibuat secara handmade oleh
-             pengrajin lokal. Cocok digunakan sebagai perlengkapan upacara
-             maupun dekorasi rumah.</p>
-        </div>
-      </div>
-    `;
-
-    const cardsHTML = rest.map(p => `
-      <div class="produk-card">
-        <img src="${p.image_url}" alt="${p.name}">
-        <div class="produk-info">
-          <h3>${p.name}</h3>
-          <span>${rupiah(p.price)}</span>
-        </div>
-      </div>
-    `).join('');
-
-    grid.innerHTML = heroHTML + cardsHTML;
-  })
-  .catch(err => console.error('Gagal load produk:', err));
- </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 <script src="Darma/main.js"> </script>
 

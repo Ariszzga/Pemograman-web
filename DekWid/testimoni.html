@@ -1,18 +1,79 @@
-<section id="testimoni" class="testimoni">
-  <div class="section-heading">
-    <p class="eyebrow">Kata Mereka</p>
-    <h2>Testimoni Pelanggan</h2>
-  </div>
+<section class="testimonial-section py-5" id="testimoni">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Apa Kata Pelanggan?</h2>
+      <p class="section-subtitle">
+        Kepuasan pelanggan adalah kebanggaan kami.
+      </p>
+    </div>
 
-  <div class="testimoni-grid">
-      <p class="testimoni-empty">Belum ada testimoni. Data akan tampil otomatis setelah tabel <code>testimonials</code> terisi.</p>
-        <div class="testimoni-card">
-          <div class="testimoni-rating">
+    <div class="row g-4">
+
+      <!-- Testimoni 1 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="testimonial-card h-100">
+          <div class="stars">
+            ★★★★★
           </div>
-          <p class="testimoni-message">&ldquo;<?= htmlspecialchars($t['message']) ?>&rdquo;</p>
-          <div class="testimoni-user">
-            
+          <p class="testimonial-text">
+            "Dulang yang saya pesan sangat rapi dan detail ukirannya.
+            Sangat cocok untuk perlengkapan upacara di rumah. Pengiriman
+            juga aman dan cepat."
+          </p>
+
+          <div class="testimonial-user">
+            <img src="img/user1.jpg" alt="Customer">
+            <div>
+              <h5>Ni Luh Sari</h5>
+              <span>Denpasar</span>
+            </div>
           </div>
         </div>
+      </div>
+
+      <!-- Testimoni 2 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="testimonial-card h-100">
+          <div class="stars">
+            ★★★★★
+          </div>
+          <p class="testimonial-text">
+            "Kualitas sokasi dan bokornya luar biasa. Finishing halus,
+            kuat, dan terlihat sangat elegan. Sudah beberapa kali
+            memesan dan selalu puas."
+          </p>
+
+          <div class="testimonial-user">
+            <img src="img/user2.jpg" alt="Customer">
+            <div>
+              <h5>I Made Dharma</h5>
+              <span>Gianyar</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimoni 3 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="testimonial-card h-100">
+          <div class="stars">
+            ★★★★★
+          </div>
+          <p class="testimonial-text">
+            "Produk anyamannya sangat berkualitas. Cocok dijadikan
+            dekorasi rumah maupun hadiah. Pelayanan ramah dan responsif."
+          </p>
+
+          <div class="testimonial-user">
+            <img src="img/user3.jpg" alt="Customer">
+            <div>
+              <h5>Komang Ayu</h5>
+              <span>Badung</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
